@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 
 jobs:
-  install:
+  exec:
     runs-on: ubuntu-latest
     steps:
     - uses: linode/action-linode-cli@v1
