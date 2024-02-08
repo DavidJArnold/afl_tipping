@@ -1,0 +1,15 @@
+name: LINODE
+
+on:
+  workflow_dispatch
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: linode/action-linode-cli@v1
+    - name: Install the Linode CLI
+      with:
+        token: ${{ secrets.linode }}
+    - name: list
+      run: linode-cli linodes ls --json
