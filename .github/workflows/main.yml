@@ -7,8 +7,8 @@ jobs:
   exec:
     runs-on: ubuntu-latest
     steps:
-    - uses: linode/action-linode-cli@v1
     - name: Install the Linode CLI
+      uses: linode/action-linode-cli@v1
       with:
         token: ${{ secrets.linode }}
     - name: list
